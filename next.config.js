@@ -1,11 +1,11 @@
 const {
   PHASE_DEVELOPMENT_SERVER,
-  PHASE_PRODUCTION_BUILD,
-  PHASE_PRODUCTION_SERVER,
 } = require('next/constants');
 
 module.exports = (phase) => ({
-  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next' : '.next-build',
+  // Keep Vercel on the default production output directory while isolating
+  // local dev artifacts on Windows.
+  ...(phase === PHASE_DEVELOPMENT_SERVER ? { distDir: '.next-dev' } : {}),
   experimental: {
     // Work around Next 15 devtools manifest crashes on Windows.
     devtoolSegmentExplorer: false,
