@@ -154,7 +154,7 @@ export default function HomePageClient({
                 <img
                   src={activeStory.image}
                   alt={activeStory.title}
-                  className="absolute inset-x-0 top-0 mx-auto h-full w-full object-contain object-center px-4 pb-24 pt-4 sm:px-8 sm:pb-32 sm:pt-8 xl:px-12 xl:pb-40"
+                  className="absolute inset-x-0 top-3 sm:top-4 xl:top-5 mx-auto h-full w-full object-contain object-center px-4 pb-24 pt-4 sm:px-8 sm:pb-32 sm:pt-8 xl:px-12 xl:pb-40"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 sm:p-16 w-full max-w-4xl">
