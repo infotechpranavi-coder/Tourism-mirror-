@@ -43,7 +43,7 @@ export default async function NewsDetail({ params }: NewsDetailProps) {
             <span className="text-dark/40 font-bold truncate max-w-[200px]">{post.title}</span>
           </nav>
 
-          <div className="relative rounded-[36px] sm:rounded-[52px] overflow-hidden h-[320px] sm:h-[420px] xl:h-[520px] shadow-2xl shadow-primary/10 border border-gray-100">
+          <div className="relative rounded-[36px] sm:rounded-[52px] overflow-hidden min-h-[420px] sm:min-h-[560px] xl:min-h-[680px] shadow-2xl shadow-primary/10 border border-gray-100">
             <PostHeroCarousel title={post.title} images={post.images.length > 0 ? post.images : [post.image]} />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/82 via-dark/28 to-transparent pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 p-8 sm:p-16 w-full max-w-5xl">

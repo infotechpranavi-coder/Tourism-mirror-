@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "node -e \"const fs=require('fs'); ['.next','.next-build','.next-dev'].forEach((dir)=>fs.rmSync(dir,{ recursive:true, force:true }))\"",
     "dev": "next dev",
-    "build": "node -e \"const fs=require('fs'); fs.rmSync('.next-build',{ recursive:true, force:true })\" && next build",
+    "build": "node -e \"const fs=require('fs'); ['.next','.next-build'].forEach((dir)=>fs.rmSync(dir,{ recursive:true, force:true }))\" && next build",
     "start": "next start",
     "lint": "next lint"
   },

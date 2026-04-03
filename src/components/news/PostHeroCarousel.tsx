@@ -37,7 +37,7 @@ export default function PostHeroCarousel({ title, images }: PostHeroCarouselProp
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0.25, scale: 1.02 }}
           transition={{ duration: 0.45, ease: 'easeOut' }}
-          className="h-full w-full object-contain p-6 sm:p-8"
+          className="h-full w-full object-contain object-center px-6 pb-36 pt-6 sm:px-8 sm:pb-48 sm:pt-8 lg:pb-56"
         />
       </AnimatePresence>
 
