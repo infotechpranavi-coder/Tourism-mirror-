@@ -1,0 +1,7 @@
+.next
+.next-dev
+node_modules
+.env.local
+.next-build
+dev-log.txt
+dev-err.txt
