@@ -60,11 +60,11 @@ export default function NewsCard({ id, title, slug, image, category, excerpt, da
       whileHover={{ y: -10 }}
       className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-50 flex flex-col h-full"
     >
-      <div className="relative h-48 sm:h-56 xl:h-64 overflow-hidden">
+      <div className="relative h-44 sm:h-52 xl:h-56 overflow-hidden bg-[radial-gradient(circle_at_top,#ffffff_0%,#eef2f7_100%)]">
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+          className="w-full h-full object-contain object-center p-4 transition-transform duration-700 group-hover:scale-105" 
         />
         <div className="absolute top-4 left-4">
            <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-primary text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
