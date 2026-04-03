@@ -149,12 +149,12 @@ export default function HomePageClient({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.02 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
-                className="relative overflow-hidden rounded-[40px] h-[500px] sm:h-[600px] xl:h-[700px]"
+                className="relative overflow-hidden rounded-[40px] min-h-[360px] sm:min-h-[460px] xl:min-h-[540px] bg-[radial-gradient(circle_at_top,#f8fafc_0%,#eef2f7_48%,#dce3ea_100%)]"
               >
                 <img
                   src={activeStory.image}
                   alt={activeStory.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] ease-linear scale-100 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-contain object-center px-6 pb-28 pt-6 sm:px-10 sm:pb-36 sm:pt-10 xl:px-16 xl:pb-44"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 sm:p-16 w-full max-w-4xl">
@@ -226,11 +226,11 @@ export default function HomePageClient({
                   custom={idx}
                   variants={homeCardReveal}
                   whileHover={{ x: 8, y: -4 }}
-                  className="group bg-gray-50 rounded-2xl p-4 flex gap-4 cursor-pointer hover:bg-white border border-transparent hover:border-gray-100 shadow-sm transition-all"
+                  className="group bg-gray-50 rounded-2xl p-3 sm:p-4 flex gap-3 cursor-pointer hover:bg-white border border-transparent hover:border-gray-100 shadow-sm transition-all"
                 >
                   <Link href={`/news/${news.slug}`} className="contents">
-                    <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
-                      <img src={news.image} alt={news.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                    <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-[radial-gradient(circle_at_top,#ffffff_0%,#eef2f7_100%)]">
+                      <img src={news.image} alt={news.title} className="w-full h-full object-contain object-center p-2 transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="flex flex-col justify-center">
                       <span className="text-[10px] font-black text-accent uppercase tracking-widest leading-none mb-2">{news.category}</span>
