@@ -379,8 +379,12 @@ export default function HomePageClient({
 
       <section className="py-20 px-8">
         <div className="max-w-[1440px] mx-auto bg-dark rounded-[40px] sm:rounded-[64px] p-8 sm:p-20 relative overflow-hidden group">
-          <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
-            <img src={safeTrendingNews[0]?.image || safeFeaturedNews[0]?.image || safeLatestNews[0]?.image || '/WhatsApp_Image_2026-04-01_at_11.33.21_AM-removebg-preview.png'} alt="Magazine banner" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity bg-[radial-gradient(circle_at_top,#505050_0%,#18181b_100%)]">
+            <img
+              src={safeTrendingNews[0]?.image || safeFeaturedNews[0]?.image || safeLatestNews[0]?.image || '/WhatsApp_Image_2026-04-01_at_11.33.21_AM-removebg-preview.png'}
+              alt="Magazine banner"
+              className="w-full h-full object-contain object-center p-8 sm:p-12"
+            />
           </div>
           <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
             <span className="px-6 py-2 bg-accent text-white text-xs font-black uppercase tracking-widest rounded-full mb-8 shadow-2xl">Database Powered</span>
